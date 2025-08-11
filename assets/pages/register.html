@@ -19,33 +19,32 @@
             <section class="hero">
                 <!-- <img class="img-hero" src="../img/icon-removebg-preview.png" alt=""> -->
                 <h1>ExpressChat</h1>
-                <p>Зарегистрируйтесь, чтобы начать работу</p>
+                <p>Register to get started</p>
             </section>
             <form onsubmit="event.preventDefault(); valideForm(event);">
                 <label class="field">
-                    <input type="text" name="addres-input" placeholder="Электронный адрес" required>
+                    <input type="text" name="addres-input" placeholder="Email" required>
                 </label>
                 <label class="field">
-                    <input type="text" name="nickName-input" placeholder="Никнейм" required>
+                    <input type="text" name="nickName-input" placeholder="Nickname" required>
                 </label>
                 <label class="field">
-                    <input type="text" name="firstLast-input" placeholder="Имя Фамилия" required>
+                    <input type="text" name="firstLast-input" placeholder="Full name" required>
                 </label>
                 <label class="field">
-                    <input id="password" type="password" name="password-register" placeholder="Пароль" required>
+                    <input id="password" type="password" name="password-register" placeholder="Password" required>
                     <button class="eye" type="button" onclick="togglePassword()">👁</button>
                 </label>
                 <div class="row">
                     <label style="display:flex;gap:8px;align-items:center">
                         <input id="checkbox" class="row-inpur" type="checkbox" name="remember">
-                        <span class="small-note">Регистрируясь, вы принимаете наши Условия, Политику конфиденциальности
-                            и Политику в отношении файлов cookie.</span>
+                        <span class="small-note">By registering, you agree to our Terms, Privacy Policy and Cookie Policy.</span>
                     </label>
                 </div>
 
                 <button class="btn" type="submit">Register</button>
                 <div class="register-link">
-                    <p class="small-note">Есть аккаунт? <a class="register-a" href="./login.html">Вход</a></p>
+                    <p class="small-note">Do you have an account ? <a class="register-a" href="./login.html">Login</a></p>
                 </div>
             </form>
         </aside>
