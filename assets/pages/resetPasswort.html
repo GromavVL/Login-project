@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Reset password</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../img/icon-removebg-preview.png">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main class="container">
+        <aside class="card">
+            <section class="hero">
+                <!-- <img class="img-hero" src="../img/icon-removebg-preview.png" alt=""> -->
+                <h1>Не удается войти?</h1>
+                <p>
+                    Введите свой электронный адрес, имя пользователя или номер телефона, и мы отправим вам ссылку для
+                    восстановления доступа к аккаунту.
+                </p>
+            </section>
+            <form onsubmit="event.preventDefault(); valideForm(event);">
+                <label class="field">
+                    <input type="text" name="addres-input" placeholder="Электронный адрес" required>
+                </label>
+                <div class="row">
+                    <label style="display:flex;gap:8px;align-items:center">
+                        <input id="checkbox" class="row-inpur" type="checkbox" name="remember">
+                        <span class="small-note">Регистрируясь, вы принимаете наши Условия, Политику конфиденциальности
+                            и Политику в отношении файлов cookie.</span>
+                    </label>
+                </div>
+                <button class="btn" type="submit">Register</button>
+                <div class="register-link">
+                    <p class="small-note">Есть аккаунт? <a class="register-a" href="./login.html">Вход</a></p>
+                </div>
+            </form>
+        </aside>
+    </main>
+
+    <script>
+        function togglePassword() {
+            const pw = document.getElementById('password');
+            pw.type = pw.type === 'password' ? 'text' : 'password';
+        }
+        function valideForm(event) {
+            const pw = document.getElementById('checkbox');
+            if (!pw.checked) {
+                alert('Пожалуйста, примите условия');
+                return false;
+            }
+            alert('Регистрация успешна');
+            event.target.reset();
+            document.getElementById('checkbox').checked = false;
+            return true;
+        }
+    </script>
+</body>
+
+</html>
