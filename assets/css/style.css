@@ -247,3 +247,28 @@ input[type="text"], input[type="password"] {
     display: flex;
     justify-content: center;
 }
+
+.hero-password {
+    padding: 36px;
+    border-radius: var(--radius);
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    backdrop-filter: blur(6px);
+    margin-bottom: 10px;
+    margin-top: 10px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hero-password h1 {
+    margin-bottom: 30px;
+    font-size: 30px;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-password p {
+    margin: 0 auto;
+    font-size: 16px;
+}
