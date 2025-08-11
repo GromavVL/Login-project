@@ -1,0 +1,224 @@
+/*-------------- Общие стили -------------*/
+* {
+    box-sizing: border-box;
+}
+
+/*---------------------------------------*/
+:root {
+    --glass-bg: rgba(255,255,255,0.06);
+    --card-bg: rgba(255,255,255,0.08);
+    --accent: linear-gradient(135deg,#8ee58a 0%, #a9f7d1 100%);
+    --radius: 14px;
+    --blur: 10px;
+    --text: #eaf2ff;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+
+body {
+    margin: 0;
+    font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+    background: radial-gradient(1200px 600px at 10% 20%, rgba(142,229,138,0.12), transparent),
+            radial-gradient(900px 400px at 90% 80%, rgba(169,247,209,0.08), transparent),#05060a;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+}
+
+.container {
+    /* width: 100%; */
+    max-width: 960px;
+    display: grid;
+    grid-template-columns: 420px;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero {
+    padding: 36px;
+    border-radius: var(--radius);
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    /* box-shadow: 0 10px 30px rgba(2,6,23,0.6); */
+    backdrop-filter: blur(6px);
+    margin-bottom: 10px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.hero h1 {
+    margin: 0 0 8px;
+    font-size: 30px;
+}
+
+.hero p {
+    margin: 0;
+    color: rgba(234,242,255,0.75);
+    line-height: 1.5;
+}
+
+.card {
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border-radius: var(--radius);
+    padding: 28px;
+    box-shadow: 0 8px 30px rgba(2,6,23,0.55);
+    border: 1px solid rgba(255,255,255,0.04);
+    backdrop-filter: blur(var(--blur));
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.field {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 12px;
+    background: var(--glass-bg);
+    border: 1px solid rgba(255,255,255,0.03);
+    transition: transform .15s ease, outline .15s ease;
+}
+
+.field:focus-within {
+    outline: 2px solid rgba(142,229,138,0.25);
+    transform: translateY(-1px);
+}
+
+.field svg {
+    flex: 0 0 20px;
+    opacity: 0.9;
+}
+
+input[type="text"], input[type="password"] {
+    border: 0;
+    background: transparent;
+    color: var(--text);
+    font-size: 15px;
+    flex: 1;
+    outline: none;
+}
+
+.row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 0;
+  cursor: pointer;
+  font-weight: 600;
+  background-image: var(--accent);
+  color: #083d2b;
+  box-shadow: 0 8px 20px rgba(142,229,138,0.25);
+  transition: transform .12s ease, box-shadow .12s ease, opacity .12s;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.06);
+  color: var(--text);
+}
+
+.btn.secondary:hover {
+  background: rgba(255,255,255,0.04);
+}
+
+.eye {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  /* padding: 6px; */
+  border-radius: 8px;
+  color: white;
+  /* font-size: 20px; */
+}
+
+.small-note {
+  font-size: 13px;
+  color: rgba(234,242,255,0.65);
+}
+
+/* ...existing code... */
+
+/* Адаптив для планшетов */
+@media (max-width: 880px) {
+  .container {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    padding: 0 12px;
+  }
+  .hero {
+    /* order: 2;  <-- удалено */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+  }
+  .card {
+    padding: 18px;
+  }
+}
+
+/* Адаптив для мобильных устройств */
+@media (max-width: 600px) {
+  body {
+    padding: 8px;
+  }
+  .container {
+    max-width: 100%;
+    gap: 18px;
+    padding: 0 4px;
+  }
+  .hero {
+    padding: 14px;
+    font-size: 18px;
+  }
+  .card {
+    padding: 10px;
+    font-size: 15px;
+  }
+  .btn {
+    padding: 10px 12px;
+    font-size: 15px;
+  }
+  .field {
+    padding: 8px;
+    font-size: 14px;
+  }
+  .small-note {
+    font-size: 12px;
+  }
+}
+
+/* ...existing code... */
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.small-note:hover {
+    color: #8ee58a;
+}
+
+.row-inpur:hover {
+    cursor: pointer;
+}
