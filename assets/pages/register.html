@@ -21,7 +21,7 @@
                 <h1>ExpressChat</h1>
                 <p>Зарегистрируйтесь, чтобы начать работу</p>
             </section>
-            <form onsubmit="event.preventDefault(); alert('Форма отправлена');">
+            <form onsubmit="event.preventDefault(); valideForm(event);">
                 <label class="field">
                     <input type="text" name="addres-input" placeholder="Электронный адрес" required>
                 </label>
@@ -38,8 +38,9 @@
 
                 <div class="row">
                     <label style="display:flex;gap:8px;align-items:center">
-                        <input class="row-inpur" type="checkbox" name="remember">
-                        <span class="small-note">Регистрируясь, вы принимаете наши Условия, Политику конфиденциальности и Политику в отношении файлов cookie.</span>
+                        <input id="checkbox" class="row-inpur" type="checkbox" name="remember">
+                        <span class="small-note">Регистрируясь, вы принимаете наши Условия, Политику конфиденциальности
+                            и Политику в отношении файлов cookie.</span>
                     </label>
                 </div>
 
@@ -55,6 +56,17 @@
         function togglePassword() {
             const pw = document.getElementById('password');
             pw.type = pw.type === 'password' ? 'text' : 'password';
+        }
+        function valideForm(event) {
+            const pw = document.getElementById('checkbox');
+            if (!pw.checked) {
+                alert('Пожалуйста, примите условия');
+                return false;
+            }
+            alert('Регистрация успешна');
+            event.target.reset();
+            document.getElementById('checkbox').checked = false;
+            return true;
         }
     </script>
 </body>
