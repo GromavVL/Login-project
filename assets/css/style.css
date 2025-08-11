@@ -3,7 +3,7 @@
     box-sizing: border-box;
 }
 
-/*---------------------------------------*/
+/*-----------------Login---------------------*/
 :root {
     --glass-bg: rgba(255,255,255,0.06);
     --card-bg: rgba(255,255,255,0.08);
@@ -127,6 +127,10 @@ input[type="text"], input[type="password"] {
   box-shadow: 0 8px 20px rgba(142,229,138,0.25);
   transition: transform .12s ease, box-shadow .12s ease, opacity .12s;
 }
+.btn:hover {
+  /* box-shadow: 0 12px 30px rgba(142,229,138,0.35); */
+  transform: translateY(-2px);
+}
 
 .btn:active {
   transform: translateY(1px);
@@ -136,6 +140,8 @@ input[type="text"], input[type="password"] {
   background: transparent;
   border: 1px solid rgba(255,255,255,0.06);
   color: var(--text);
+  text-decoration: none;
+  font-size: 12px;
 }
 
 .btn.secondary:hover {
@@ -228,4 +234,16 @@ input[type="text"], input[type="password"] {
 .img-hero {
     width: 100px;
     height: 100px;
+}
+
+/* ----------------------------------------- */
+
+/*-------------- Регистрация -------------*/
+.register-a {
+    color: yellowgreen;
+}
+
+.register-link {
+    display: flex;
+    justify-content: center;
 }

@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Вход</title>
+    <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="../img/icon-removebg-preview.png">
 
@@ -17,7 +18,7 @@
         <aside class="card">
             <section class="hero">
                 <img class="img-hero" src="../img/icon-removebg-preview.png" alt="">
-                <h1>Добро пожаловать</h1>
+                <h1>Добро пожаловать в ExpressChat</h1>
                 <p>Войдите в свой аккаунт, чтобы продолжить.</p>
             </section>
             <form onsubmit="event.preventDefault(); alert('Форма отправлена');">
@@ -47,13 +48,11 @@
                     </label>
                     <a href="#" class="small-note">Забыли пароль ?</a>
                 </div>
-
                 <button class="btn" type="submit">Войти</button>
-                <button class="btn secondary" type="button">Регистрация</button>
+                <a class="btn secondary" href="../pages/register.html">Register</a>
             </form>
         </aside>
     </main>
-
     <script>
         function togglePassword() {
             const pw = document.getElementById('password');

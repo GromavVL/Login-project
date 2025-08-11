@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Register</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../img/icon-removebg-preview.png">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main class="container">
+        <aside class="card">
+            <section class="hero">
+                <!-- <img class="img-hero" src="../img/icon-removebg-preview.png" alt=""> -->
+                <h1>ExpressChat</h1>
+                <p>Зарегистрируйтесь, чтобы начать работу</p>
+            </section>
+            <form onsubmit="event.preventDefault(); alert('Форма отправлена');">
+                <label class="field">
+                    <input type="text" name="addres-input" placeholder="Электронный адрес" required>
+                </label>
+                <label class="field">
+                    <input type="text" name="nickName-input" placeholder="Никнейм" required>
+                </label>
+                <label class="field">
+                    <input type="text" name="firstLast-input" placeholder="Имя Фамилия" required>
+                </label>
+                <label class="field">
+                    <input id="password" type="password" name="password-register" placeholder="Пароль" required>
+                    <button class="eye" type="button" onclick="togglePassword()">👁</button>
+                </label>
+
+                <div class="row">
+                    <label style="display:flex;gap:8px;align-items:center">
+                        <input class="row-inpur" type="checkbox" name="remember">
+                        <span class="small-note">Регистрируясь, вы принимаете наши Условия, Политику конфиденциальности и Политику в отношении файлов cookie.</span>
+                    </label>
+                </div>
+
+                <button class="btn" type="submit">Register</button>
+                <div class="register-link">
+                    <p class="small-note">Есть аккаунт? <a class="register-a" href="./login.html">Вход</a></p>
+                </div>
+            </form>
+        </aside>
+    </main>
+
+    <script>
+        function togglePassword() {
+            const pw = document.getElementById('password');
+            pw.type = pw.type === 'password' ? 'text' : 'password';
+        }
+    </script>
+</body>
+
+</html>
